@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" href="../assets/logos/green-leaf-icon-template-vector-23597584.png" type="image/png" />
+    <title>Contact Page ParadiseTrails</title>
+    <link rel="stylesheet" href="../style/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+
+    <header class="top-navigation" id="header">
+      <div class="main-container">
+        <!-- Logo Section -->
+        <div class="brand-wrapper">
+          <a href="#" class="brand-identity">
+            <img
+              src="../assets/images/logo/paradise-logo.png"
+              alt="Paradise Trails Logo"
+            />
+          </a>
+        </div>
+        <nav class="menu-container" id="nav">
+          <ul class="menu-items">
+            <li>
+              <a href="../pages/home.html" class="menu-anchor" id="home-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/home.html#destinations"
+                class="menu-anchor"
+                id="about-link"
+                >Destinations</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/trips.html"
+                class="menu-anchor"
+                id="services-link"
+                >Trips</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/gallery.html"
+                class="menu-anchor"
+                id="portfolio-link"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/about.html"
+                class="menu-anchor"
+                id="contact-link"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/contact.html"
+                class="menu-anchor active"
+                id="contact-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="hamburger-button"
+          id="mobile-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="carousel">
+          <div class="carousel-images">
+            <img
+              src="https://images.pexels.com/photos/46254/leopard-wildcat-big-cat-botswana-46254.jpeg"
+              alt="Tiger in Tadoba"
+            />
+            <img
+              src="https://images.pexels.com/photos/594111/pexels-photo-594111.jpeg"
+              alt="Wildlife Safari"
+            />
+            <img
+              src="https://images.pexels.com/photos/234054/pexels-photo-234054.jpeg"
+              alt="Forest Birds"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">Contact Us</h1>
+
+        <a href="../pages/contact_form.html" class="book-now-btn"> Book Now </a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Wildlife Experiences</h2>
+        <div class="features-grid">
+          <div
+            class="feature-card scroll-reveal clickable-card"
+            onclick="showDetails('tiger')"
+          >
+            <div class="feature-icon">🐅</div>
+            <h3>Tiger Safaris</h3>
+            <p>
+              Experience the thrill of spotting the majestic Bengal tigers in
+              their natural habitat. Our expert guides ensure the best wildlife
+              viewing opportunities.
+            </p>
+            <button class="card-button">Learn More</button>
+          </div>
+          <div
+            class="feature-card scroll-reveal clickable-card"
+            onclick="showDetails('birds')"
+          >
+            <div class="feature-icon">🦅</div>
+            <h3>Bird Watching</h3>
+            <p>
+              Discover over 200 species of birds including the Indian Pitta,
+              Orange-headed Thrush, and various migratory species.
+            </p>
+            <button class="card-button">Learn More</button>
+          </div>
+          <div
+            class="feature-card scroll-reveal clickable-card"
+            onclick="showDetails('nature')"
+          >
+            <div class="feature-icon">🌿</div>
+            <h3>Nature Walks</h3>
+            <p>
+              Explore the rich biodiversity of Tadoba with guided nature walks
+              through diverse ecosystems and landscapes.
+            </p>
+            <button class="card-button">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+      <div class="container">
+        <h2 class="section-title">Explore Sri Lanka</h2>
+        <p class="map-subtitle">
+          Discover the beautiful island nation and plan your wildlife adventure
+        </p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126562.15738011294!2d79.829047!3d7.0765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f740b8451b07%3A0x7a32909a84e124c9!2sJa-Ela%2C%20Sri%20Lanka!5e0!3m2!1sen!2sin!4v1683282022763!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style="border: 0; border-radius: 20px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Details -->
+    <div id="detailModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalBody">
+          <!-- Content will be dynamically loaded -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contactsection">
+      <div class="container">
+        <h2 class="section-title">Plan Your Adventure</h2>
+        <p class="contact-subtitle">
+          Ready to witness the wild? Contact us for personalized safari
+          experiences and accommodation bookings.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card scroll-reveal">
+            <div class="contact-icon">📞</div>
+            <h3 style="color: black">Reservations</h3>
+            <a href="tel:+94772243030" class="contact-link">
+              <p>+94 77 224 3030</p>
+            </a>
+          </div>
+
+          <div class="contact-card scroll-reveal">
+            <div class="contact-icon">✉️</div>
+            <h3 style="color: black">Email</h3>
+            <a href="mailto:paradisetrailslk@gmail.com" class="contact-link">
+              <p>paradisetrailslk@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="contact-card scroll-reveal">
+            <div class="contact-icon">📍</div>
+            <h3 style="color: black">Location</h3>
+            <a
+              href="https://www.google.com/maps/search/Reality+Plaza,+Ja‑Ela,+Sri+Lanka"
+              target="_blank"
+              class="contact-link"
+            >
+              <p>Reality Plaza, Ja‑Ela, Sri Lanka, 11350</p>
+            </a>
+          </div>
+
+          <div class="contact-card scroll-reveal">
+            <div class="contact-icon">🕒</div>
+            <h3 style="color: black">Office Times</h3>
+            <a
+              href="https://calendar.google.com/calendar/r/eventedit?text=Paradise+Safari&dates=20250627T090000/20250627T100000&details=Safari+Tour+from+Paradise+Trails"
+              target="_blank"
+              class="contact-link"
+            >
+              <p>9:00 AM & 7:00 PM</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        <div class="brand-section animate-on-scroll">
+          <a href="#">
+            <img
+              src="../assets/images/paradise-logo-removebg-preview.png"
+              class="logo-footer"
+              alt="Paradise Trails Logo"
+            />
+          </a>
+          <p class="brand-description">
+            As a naturalist, I observe the world not just with curiosity, but
+            with purpose. I believe every leaf, stone, and species holds a story
+            worth listening to. My work is driven by a deep respect for nature
+            and a commitment to understanding, preserving, and living in harmony
+            with it.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/paradisetrailslk/"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/paradisetrailslk"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://www.youtube.com/c/ParadiseTrailsSriLanka"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column animate-on-scroll">
+          <h3>Quick Links</h3>
+          <a href="../pages/home.html" class="footer-link">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="../pages/home.html#destinations" class="footer-link">
+            <i class="fas fa-map-marker-alt"></i> Destinations
+          </a>
+          <a href="../pages/trips.html" class="footer-link">
+            <i class="fas fa-plane"></i> Trips
+          </a>
+          <a href="../pages/gallery.html" class="footer-link">
+            <i class="fas fa-images"></i> Gallery
+          </a>
+          <a href="../pages/about.html" class="footer-link">
+            <i class="fas fa-user"></i> About
+          </a>
+          <a href="../pages/contact.html" class="footer-link">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+        </div>
+
+        <div class="footer-column animate-on-scroll">
+          <h3>Services</h3>
+          <a href="#" class="footer-link">
+            <i class="fas fa-binoculars"></i> Wildlife Tours
+          </a>
+          <a href="#" class="footer-link">
+            <i class="fas fa-mountain"></i> Safari Adventures
+          </a>
+          <a href="#" class="footer-link">
+            <i class="fas fa-camera"></i> Photography Tours
+          </a>
+          <a href="#" class="footer-link">
+            <i class="fas fa-leaf"></i> Nature Walks
+          </a>
+        </div>
+
+        <div class="contact-box animate-on-scroll">
+          <h3>Contact me for any further details</h3>
+          <p class="contact-number">
+            <a href="tel:+94772243030">
+              <i class="fas fa-phone"></i> Call us on 077 224 3030
+            </a>
+          </p>
+          <p>
+            Ready to embark on your next adventure? Let's create unforgettable
+            memories together.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2024 ParadiseTrails Pvt. Ltd. All rights reserved. Made with
+          <span class="heart">💚</span> by @Enjoy Programming
+        </p>
+      </div>
+    </footer>
+
+    <!-- Footer Section -->
+
+    <script src="../js/contact.js"></script>
+    <script src="../js/index.js    "></script>
+    <script src="../js/footer.js"></script>
+  </body>
+</html>

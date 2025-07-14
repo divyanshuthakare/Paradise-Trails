@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" href="../assets/logos/green-leaf-icon-template-vector-23597584.png" type="image/png" />
+    <title>Paradise Trails - Gallery</title>
+    <link rel="stylesheet" href="../style/gallery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="top-navigation" id="header">
+      <div class="main-container">
+        <!-- Logo Section -->
+        <div class="brand-wrapper">
+          <a href="#" class="brand-identity">
+            <img
+              src="../assets/logos/paradise-logo.png"
+              alt="Paradise Trails Logo"
+            />
+          </a>
+        </div>
+        <nav class="menu-container" id="nav">
+          <ul class="menu-items">
+            <li>
+              <a href="../pages/home.html" class="menu-anchor" id="home-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/home.html#destinations"
+                class="menu-anchor"
+                id="about-link"
+                >Destinations</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/trips.html"
+                class="menu-anchor"
+                id="services-link"
+                >Trips</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/gallery.html"
+                class="menu-anchor active"
+                id="portfolio-link"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/about.html"
+                class="menu-anchor"
+                id="contact-link"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/contact.html"
+                class="menu-anchor"
+                id="contact-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="hamburger-button"
+          id="mobile-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div
+        class="hero-image"
+        style="
+          background-image: url(../assets/images/gallery-background-image.avif);
+        "
+      ></div>
+      <div class="main-title">
+        <h2>Gallery</h2>
+      </div>
+    </div>
+
+    <!-- Gallery Content -->
+    <div class="gallery-content" id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <h2>Moments from the Wild</h2>
+          <p class="subtitle">
+            Capturing the beauty and wonder of nature's finest moments
+          </p>
+        </div>
+
+        <!-- Main Gallery Grid -->
+        <div class="main-gallery-item" data-gallery="main">
+          <img
+            style="height: 400px"
+            src="../assets/images/banner-one.png"
+            alt="Group Safari Experience"
+          />
+        </div>
+        <br />
+        <div class="main-gallery">
+          <div class="main-gallery-item main-gallery-large" data-gallery="main">
+            <img
+              src="../assets/images/tiger-one.jpg"
+              alt="Group Safari Experience"
+            />
+          </div>
+          <div class="main-gallery-right">
+            <div class="main-gallery-item" data-gallery="main">
+              <img src="../assets/images/owl.jpg" alt="Majestic Tiger" />
+            </div>
+            <div class="main-gallery-item" data-gallery="main">
+              <img
+                src="../assets/images/bisen-one.jpg"
+                alt="Elephant Encounter"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Now Button -->
+        <div class="book-now-container">
+          <a href="../pages/contact_form.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <!-- Small Gallery Grid -->
+        <div class="small-gallery">
+          <div class="small-gallery-item" data-gallery="small">
+            <img
+              src="../assets/images/spoted-laypard.jpg"
+              alt="Colorful Bird"
+            />
+          </div>
+          <div class="small-gallery-item" data-gallery="small">
+            <img
+              src="../assets/images/elephant-with-family.jpg"
+              alt="Wild Bison"
+            />
+          </div>
+          <div class="small-gallery-item" data-gallery="small">
+            <img
+              src="../assets/images/gallery-lion.jpeg"
+              alt="Tiger in Nature"
+            />
+          </div>
+          <div class="small-gallery-item" data-gallery="small">
+            <img src="../assets/images/two-tigers.jpg" alt="Spotted Leopard" />
+          </div>
+          <div class="small-gallery-item" data-gallery="small">
+            <img src="../assets/images/bird-one.jpg" alt="Tiger Portrait" />
+          </div>
+          <div class="small-gallery-item" data-gallery="small">
+            <img src="../assets/images/gallery-image.png" alt="Wise Owl" />
+          </div>
+          <div class="small-gallery-item" data-gallery="small">
+            <img
+              src="../assets/images/gallery-three.jpeg"
+              alt="Elephant Family"
+            />
+          </div>
+          <div class="small-gallery-item" data-gallery="small">
+            <img
+              src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2063&q=80"
+              alt="Two Tigers"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Modal -->
+    <div class="modal-overlay" id="imageModal">
+      <div class="modal-content">
+        <div class="modal-loading" id="modalLoading"></div>
+        <img class="modal-image" id="modalImage" alt="" />
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          &times;
+        </button>
+        <button
+          class="modal-nav modal-prev"
+          id="modalPrev"
+          aria-label="Previous image"
+        >
+          &#8249;
+        </button>
+        <button
+          class="modal-nav modal-next"
+          id="modalNext"
+          aria-label="Next image"
+        >
+          &#8250;
+        </button>
+        <div class="modal-counter" id="modalCounter">1 / 10</div>
+      </div>
+    </div>
+
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        <div class="brand-section animate-on-scroll">
+          <a href="#">
+            <img
+              src="../assets/images/paradise-logo-removebg-preview.png"
+              class="logo-footer"
+              alt="Paradise Trails Logo"
+            />
+          </a>
+          <p class="brand-description">
+            As a naturalist, I observe the world not just with curiosity, but
+            with purpose. I believe every leaf, stone, and species holds a story
+            worth listening to. My work is driven by a deep respect for nature
+            and a commitment to understanding, preserving, and living in harmony
+            with it.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/paradisetrailslk/"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/paradisetrailslk"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://www.youtube.com/c/ParadiseTrailsSriLanka"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column animate-on-scroll">
+          <h3>Quick Links</h3>
+          <a href="../pages/home.html" class="footer-link">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="../pages/home.html#destinations" class="footer-link">
+            <i class="fas fa-map-marker-alt"></i> Destinations
+          </a>
+          <a href="../pages/trips.html" class="footer-link">
+            <i class="fas fa-plane"></i> Trips
+          </a>
+          <a href="../pages/gallery.html" class="footer-link">
+            <i class="fas fa-images"></i> Gallery
+          </a>
+          <a href="../pages/about.html" class="footer-link">
+            <i class="fas fa-user"></i> About
+          </a>
+          <a href="../pages/contact.html" class="footer-link">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+        </div>
+
+        <div class="footer-column animate-on-scroll">
+          <h3>Services</h3>
+          <a href="#" class="footer-link">
+            <i class="fas fa-binoculars"></i> Wildlife Tours
+          </a>
+          <a href="#" class="footer-link">
+            <i class="fas fa-mountain"></i> Safari Adventures
+          </a>
+          <a href="#" class="footer-link">
+            <i class="fas fa-camera"></i> Photography Tours
+          </a>
+          <a href="#" class="footer-link">
+            <i class="fas fa-leaf"></i> Nature Walks
+          </a>
+        </div>
+
+        <div class="contact-box animate-on-scroll">
+          <h3>Contact me for any further details</h3>
+          <p class="contact-number">
+            <a href="tel:+94772243030">
+              <i class="fas fa-phone"></i> Call us on 077 224 3030
+            </a>
+          </p>
+          <p>
+            Ready to embark on your next adventure? Let's create unforgettable
+            memories together.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2024 ParadiseTrails Pvt. Ltd. All rights reserved. Made with
+          <span class="heart">💚</span> by @Enjoy Programming
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/gallery.js"></script>
+  </body>
+</html>
