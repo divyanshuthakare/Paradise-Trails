@@ -1633,6 +1633,13 @@ body {
   }
 }
 
+
+
+
+
+
+
+
 .back-side-image {
   width: 100%;
   min-height: 50vh;
@@ -1650,20 +1657,23 @@ body {
   height: 60vh;
   max-height: 600px;
   min-height: 300px;
-
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(30, 160, 63, 0.2);
-
+  
+  /* Fixed: Consistent image path */
   background-image: url(../assets/images/banner-one.png);
-  background-size: contain; /* Changed from cover to contain */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
+  
+  /* Debug: Add fallback background color to see if container is visible */
+  background-color: rgba(255, 255, 255, 0.1);
+  
   transition: transform 0.3s ease;
 }
 
 .side-image-one:hover {
-  transform: scale(1.02); /* Subtle zoom on hover */
+  transform: scale(1.02);
 }
 
 /* Large screens (desktops) */
@@ -1722,6 +1732,7 @@ body {
     max-height: 350px;
     min-height: 250px;
     border-radius: 8px;
+    /* Fixed: Keep consistent background-size */
     background-size: contain;
   }
 }
@@ -1739,6 +1750,7 @@ body {
     min-height: 200px;
     border-radius: 6px;
     box-shadow: 0 4px 16px rgba(9, 190, 15, 0.15);
+    /* Fixed: Use contain instead of cover for consistency */
     background-size: contain;
   }
 
@@ -1758,6 +1770,7 @@ body {
     height: 35vh;
     max-height: 250px;
     min-height: 180px;
+    /* Fixed: Use contain for consistency */
     background-size: contain;
   }
 }
@@ -1776,10 +1789,10 @@ body {
   }
 }
 
-/* High DPI screens */
+/* High DPI screens - Fixed path consistency */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .side-image-one {
-    background-image: url(/assets/images/banner-one.png); /* Use high-res image if available */
+    background-image: url(../assets/images/banner-one.png);
   }
 }
 
@@ -1804,6 +1817,28 @@ body {
     transform: none;
   }
 }
+
+/* Debug styles - Remove after testing */
+.debug-mobile {
+  border: 2px solid red !important;
+  background-color: rgba(255, 0, 0, 0.2) !important;
+}
+
+/* Alternative approach if image still doesn't show */
+@media (max-width: 575px) {
+  .side-image-one-alt {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+
+
+
+
+
+
+
 
 .footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
